@@ -251,7 +251,12 @@ distinguish the 6 sub-populations.
 ### Running admixture
 
 ```{bash}
+# For Linux users 
 ../bin/admixture ../data/H938_Euro.LDprune.bed 6
+
+
+# For Mac Users 
+../extras/bin_mac/admixture_macosx-1.3.0/admixture ../data/H938_Euro.LDprune.bed 6
 ```
 
 As it runs you will see updates describing the progress of the
