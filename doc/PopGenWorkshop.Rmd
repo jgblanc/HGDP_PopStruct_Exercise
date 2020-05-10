@@ -95,11 +95,14 @@ analysis simple, use the `--chr` command to limit the analysis to SNPs on chromo
 # For Linux users
 zcat ../data/H938.bed.gz > ../data/H938.bed
 ../bin/plink --bfile ../data/H938 --hardy --chr 1 --out H938 --noweb
+```
 
+```{bash}
 # For Mac userss 
 gzcat ../data/H938.bed.gz > ../data/H938.bed
 ../extras/bin_mac/plink --bfile ../data/H938 --hardy --chr 1 --out H938 --noweb
 ```
+
 
 Next, you are going to read the output of this command into R and visually
 explore the predictions of Hardy-Weinberg proportions.
@@ -258,11 +261,13 @@ distinguish the 6 sub-populations.
 ```{bash}
 # For Linux users 
 ../bin/admixture_linux-1.3.0/admixture ../data/H938_Euro.LDprune.bed 6
+```
 
-
+```{bash}
 # For Mac Users 
 ../extras/bin_mac/admixture_macosx-1.3.0/admixture ../data/H938_Euro.LDprune.bed 6
 ```
+
 
 As it runs you will see updates describing the progress of the
 iterative optimization algorithm.  For this data, the program will run for ~100
@@ -479,8 +484,15 @@ The `--assoc` command in plink will produce p-values for a basic
 regression of phenotype on additive genotypic score.
 
 ```{bash}
+# For linux users 
 ../bin/plink --bfile ../data/H938_Euro --pheno ../data/pheno.sim.txt --assoc --out H938_Euro_sim.pheno --noweb
 ```
+
+```{bash}
+# For Mac users 
+../extras/bin_mac/plink --bfile ../data/H938_Euro --pheno ../data/pheno.sim.txt --assoc --out H938_Euro_sim.pheno --noweb
+```
+
 ### Exploring the results:  A Manhattan plot
 
 Read in the plink results contained in the `.qassoc` output file and
